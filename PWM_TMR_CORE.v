@@ -248,10 +248,10 @@ always @(posedge CLK_I, negedge RST_I) begin
             endcase
         end
     end
-    else if (counter_rst) begin //
+    else if (counter_rst) begin // clear flag condition
         ctrl_reg[5]   <= 0;
     end
-    else if ((main_counter1 == (period_sync_out1-1)) && !mode_pwm) begin //tmr mode
+    else if ((main_counter1 == (period_sync_out1-1)) && !mode_pwm) begin // tmr mode
         ctrl_reg[5] <= 1;
     end
 
@@ -265,8 +265,6 @@ always @(posedge DIV_CLK) begin
         main_counter2 <= 0;
         main_counter3 <= 0;
         main_counter4 <= 0;
-        // ctrl_reg[5]   <= 0;    //interrupt Flag
-
     end
     else if (counter_en && cont_count) begin
         main_counter1 <= main_counter1 + 1'b1;
