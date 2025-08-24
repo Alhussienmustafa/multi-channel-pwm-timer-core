@@ -1,5 +1,7 @@
 Multi-Channel PWM/Timer Core FPGA Project
+
 Overview
+
 This repository contains the design and documentation for a Multi-Channel PWM/Timer Core, developed as my submission for the IEEE Helwan Digital Design Competition. 
 As Chairman of the Communications Society Chapter at IEEE Helwan Student Branch, I created this 16-bit core based on the provided specs. 
 The project showcases advanced FPGA design techniques, including dual clock support and runtime configurability.
